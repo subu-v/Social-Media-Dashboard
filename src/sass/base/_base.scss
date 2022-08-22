@@ -1,0 +1,23 @@
+@use "abstract" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(0deg, $white 70%, $pale-blue 30%) no-repeat;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.container-120w {
+  max-width: 120rem;
+  margin: 0 auto;
+}

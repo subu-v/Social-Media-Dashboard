@@ -1,0 +1,165 @@
+@use "abstract" as *;
+@use "base" as *;
+
+.smd {
+  padding: 3.2rem 2.4rem;
+
+  &__heading-box {
+    @include flex(row, space-between, center, 0);
+    margin-bottom: 3.2rem;
+  }
+
+  &__heading,
+  &__no-of-followers,
+  &__total-reach {
+    color: $dark-blue;
+  }
+
+  &__heading {
+    font-size: 3rem;
+  }
+
+  &__total-followers {
+    color: $greyish-blue-dark;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  &__mode {
+    &--name {
+      color: $greyish-blue-dark;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__followers-grid {
+    @include grid(4, 2.4rem, 0);
+    margin-bottom: 4.8rem;
+  }
+
+  &__followers,
+  &__reach-box {
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: hsl(230, 22%, 74%);
+    }
+  }
+
+  &__followers {
+    background-color: $greyish-blue-light;
+    border-radius: 0.5rem;
+    padding: 1.8rem 3.6rem;
+    text-align: center;
+  }
+
+  &__facebook,
+  &__twitter,
+  &__youtube {
+    border-top: 4px solid;
+  }
+
+  &__facebook {
+    border-color: $fb-color;
+  }
+
+  &__twitter {
+    border-color: $twitter-color;
+  }
+
+  &__instagram {
+    position: relative;
+  }
+
+  &__instagram::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding-top: 0.4rem;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(
+      to right,
+      hsl(37, 97%, 70%),
+      hsl(329, 70%, 58%)
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: subtract;
+  }
+
+  &__youtube {
+    border-color: $youtube-color;
+  }
+
+  &__id-box {
+    @include flex(row, center, center, 0.8rem);
+    margin-bottom: 1.8rem;
+  }
+
+  &__id-name {
+    color: $greyish-blue-dark;
+    font-weight: 700;
+  }
+
+  &__no-of-followers {
+    font-size: 4.8rem;
+    font-weight: 700;
+  }
+
+  &__followers-text {
+    color: $greyish-blue-dark;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 2.4rem;
+  }
+
+  &__increase-box,
+  &__decrease-box {
+    @include flex(row, center, center, 0.4rem);
+    font-weight: 700;
+  }
+
+  &__increase-box {
+    color: $lime-green;
+  }
+
+  &__decrease-box {
+    color: $bright-red;
+  }
+
+  &__overview-heading {
+    font-size: 2.4rem;
+    color: $greyish-blue-dark;
+    margin-bottom: 2rem;
+  }
+
+  &__overview-grid {
+    @include grid(4, 2.4rem, 1.8rem);
+  }
+
+  &__reach-box {
+    background-color: $greyish-blue-light;
+    border-radius: 0.5rem;
+    padding: 1.8rem;
+  }
+
+  &__reach-heading-box {
+    @include flex(row, space-between, center, 0);
+    margin-bottom: 2.4rem;
+  }
+
+  &__mode-of-reach {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $greyish-blue-dark;
+  }
+
+  &__reach-description-box {
+    @include flex(row, space-between, center, 0);
+  }
+  &__total-reach {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}

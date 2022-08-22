@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(0deg, hsl(0deg, 0%, 100%) 70%, hsl(225deg, 100%, 98%) 30%) no-repeat;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.container-120w {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.smd {
+  padding: 3.2rem 2.4rem;
+}
+.smd__heading-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 3.2rem;
+}
+.smd__heading, .smd__no-of-followers, .smd__total-reach {
+  color: hsl(230deg, 17%, 14%);
+}
+.smd__heading {
+  font-size: 3rem;
+}
+.smd__total-followers {
+  color: hsl(228deg, 12%, 44%);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.smd__mode--name {
+  color: hsl(228deg, 12%, 44%);
+  font-size: 1.2rem;
+}
+.smd__followers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2.4rem;
+  row-gap: 0;
+  margin-bottom: 4.8rem;
+}
+.smd__followers, .smd__reach-box {
+  transition: all 0.3s ease;
+}
+.smd__followers:hover, .smd__reach-box:hover {
+  background-color: hsl(230deg, 22%, 74%);
+}
+.smd__followers {
+  background-color: hsl(227deg, 47%, 96%);
+  border-radius: 0.5rem;
+  padding: 1.8rem 3.6rem;
+  text-align: center;
+}
+.smd__facebook, .smd__twitter, .smd__youtube {
+  border-top: 4px solid;
+}
+.smd__facebook {
+  border-color: hsl(208deg, 92%, 53%);
+}
+.smd__twitter {
+  border-color: hsl(203deg, 89%, 53%);
+}
+.smd__instagram {
+  position: relative;
+}
+.smd__instagram::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding-top: 0.4rem;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(to right, hsl(37deg, 97%, 70%), hsl(329deg, 70%, 58%));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: subtract;
+}
+.smd__youtube {
+  border-color: hsl(348deg, 97%, 39%);
+}
+.smd__id-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+.smd__id-name {
+  color: hsl(228deg, 12%, 44%);
+  font-weight: 700;
+}
+.smd__no-of-followers {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+.smd__followers-text {
+  color: hsl(228deg, 12%, 44%);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  margin-bottom: 2.4rem;
+}
+.smd__increase-box, .smd__decrease-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+}
+.smd__increase-box {
+  color: hsl(163deg, 72%, 41%);
+}
+.smd__decrease-box {
+  color: hsl(356deg, 69%, 56%);
+}
+.smd__overview-heading {
+  font-size: 2.4rem;
+  color: hsl(228deg, 12%, 44%);
+  margin-bottom: 2rem;
+}
+.smd__overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2.4rem;
+  row-gap: 1.8rem;
+}
+.smd__reach-box {
+  background-color: hsl(227deg, 47%, 96%);
+  border-radius: 0.5rem;
+  padding: 1.8rem;
+}
+.smd__reach-heading-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 2.4rem;
+}
+.smd__mode-of-reach {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(228deg, 12%, 44%);
+}
+.smd__reach-description-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.smd__total-reach {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=/main.07544d9b.css.map */
