@@ -29,9 +29,14 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 23.4375em) {
+  html {
+    font-size: 43.75%;
+  }
+}
 
 body {
-  background: linear-gradient(0deg, var(--clr-bg) 70%, var(--clg-top-pattern) 30%) no-repeat;
+  background-image: linear-gradient(0deg, var(--clr-bg) 70%, var(--clg-top-pattern) 30%) no-repeat;
   box-sizing: border-box;
   height: 100vh;
   font-family: "Inter", sans-serif;
@@ -45,6 +50,11 @@ body {
 .smd {
   padding: 3.2rem 2.4rem;
 }
+@media (max-width: 23.4375em) {
+  .smd {
+    padding: 4.8rem 3.2rem;
+  }
+}
 .smd__heading-box {
   display: flex;
   flex-direction: row;
@@ -53,16 +63,38 @@ body {
   gap: 0;
   margin-bottom: 3.2rem;
 }
+@media (max-width: 23.4375em) {
+  .smd__heading-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: initial;
+    gap: 3.2rem;
+  }
+}
 .smd__heading, .smd__no-of-followers, .smd__total-reach {
   color: var(--text-dark);
 }
 .smd__heading {
   font-size: 3rem;
 }
+@media (max-width: 23.4375em) {
+  .smd__heading {
+    margin-bottom: 0.6rem;
+    font-size: 3.8rem;
+  }
+}
 .smd__total-followers {
   color: var(--text-light);
   font-weight: 700;
   font-size: 1.2rem;
+}
+@media (max-width: 23.4375em) {
+  .smd__total-followers {
+    font-size: 2.2rem;
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid var(--text-light);
+  }
 }
 .smd__mode {
   display: flex;
@@ -71,10 +103,20 @@ body {
   align-items: center;
   gap: 1.2rem;
 }
+@media (max-width: 23.4375em) {
+  .smd__mode {
+    justify-content: space-between;
+  }
+}
 .smd__mode--name {
   color: var(--clr-toggle);
   font-size: 1.2rem;
   font-weight: 700;
+}
+@media (max-width: 23.4375em) {
+  .smd__mode--name {
+    font-size: 2rem;
+  }
 }
 .smd__mode--dark {
   background-color: hsl(230deg, 22%, 74%);
@@ -110,6 +152,12 @@ body {
   row-gap: 0;
   margin-bottom: 4.8rem;
 }
+@media (max-width: 23.4375em) {
+  .smd__followers-grid {
+    grid-template-columns: none;
+    row-gap: 3.2rem;
+  }
+}
 .smd__followers, .smd__reach-box {
   cursor: pointer;
   transition: all 0.3s ease;
@@ -122,6 +170,11 @@ body {
   border-radius: 0.5rem;
   padding: 1.8rem 3.6rem;
   text-align: center;
+}
+@media (max-width: 23.4375em) {
+  .smd__followers {
+    padding: 3.2rem 4rem;
+  }
 }
 .smd__facebook, .smd__twitter, .smd__youtube {
   border-top: 4px solid;
@@ -165,12 +218,22 @@ body {
   font-size: 4.8rem;
   font-weight: 700;
 }
+@media (max-width: 23.4375em) {
+  .smd__no-of-followers {
+    font-size: 6.4rem;
+  }
+}
 .smd__followers-text {
   color: var(--text-light);
   text-transform: uppercase;
   font-size: 1.2rem;
   letter-spacing: 4px;
   margin-bottom: 2.4rem;
+}
+@media (max-width: 23.4375em) {
+  .smd__followers-text {
+    font-size: 1.6rem;
+  }
 }
 .smd__increase-box, .smd__decrease-box {
   display: flex;
@@ -186,10 +249,20 @@ body {
 .smd__decrease-box {
   color: hsl(356deg, 69%, 56%);
 }
+@media (max-width: 23.4375em) {
+  .smd__reach-percentage {
+    font-size: 1.6rem;
+  }
+}
 .smd__overview-heading {
   font-size: 2.4rem;
   color: var(--clr-overview-heading);
   margin-bottom: 2rem;
+}
+@media (max-width: 23.4375em) {
+  .smd__overview-heading {
+    font-size: 3.6rem;
+  }
 }
 .smd__overview-grid {
   display: grid;
@@ -197,10 +270,21 @@ body {
   column-gap: 2.4rem;
   row-gap: 1.8rem;
 }
+@media (max-width: 23.4375em) {
+  .smd__overview-grid {
+    grid-template-columns: none;
+    row-gap: 2.4rem;
+  }
+}
 .smd__reach-box {
   background-color: var(--clr-card-bg);
   border-radius: 0.5rem;
   padding: 1.8rem;
+}
+@media (max-width: 23.4375em) {
+  .smd__reach-box {
+    padding: 3rem;
+  }
 }
 .smd__reach-heading-box {
   display: flex;
@@ -215,6 +299,11 @@ body {
   font-weight: 700;
   color: var(--text-light);
 }
+@media (max-width: 23.4375em) {
+  .smd__mode-of-reach {
+    font-size: 2rem;
+  }
+}
 .smd__reach-description-box {
   display: flex;
   flex-direction: row;
@@ -225,6 +314,11 @@ body {
 .smd__total-reach {
   font-size: 3rem;
   font-weight: 700;
+}
+@media (max-width: 23.4375em) {
+  .smd__total-reach {
+    font-size: 4rem;
+  }
 }
 
 /*# sourceMappingURL=/main.07544d9b.css.map */

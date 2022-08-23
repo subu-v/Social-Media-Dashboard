@@ -4,9 +4,17 @@
 .smd {
   padding: 3.2rem 2.4rem;
 
+  @include responsive(mobile) {
+    padding: 4.8rem 3.2rem;
+  }
+
   &__heading-box {
     @include flex(row, space-between, center, 0);
     margin-bottom: 3.2rem;
+
+    @include responsive(mobile) {
+      @include flex(column, initial, initial, 3.2rem);
+    }
   }
 
   &__heading,
@@ -17,21 +25,39 @@
 
   &__heading {
     font-size: 3rem;
+    @include responsive(mobile) {
+      margin-bottom: 0.6rem;
+      font-size: 3.8rem;
+    }
   }
 
   &__total-followers {
     color: var(--text-light);
     font-weight: 700;
     font-size: 1.2rem;
+
+    @include responsive(mobile) {
+      font-size: 2.2rem;
+      padding-bottom: 2.4rem;
+      border-bottom: 1px solid var(--text-light);
+    }
   }
 
   &__mode {
     @include flex(row, center, center, 1.2rem);
 
+    @include responsive(mobile) {
+      justify-content: space-between;
+    }
+
     &--name {
       color: var(--clr-toggle);
       font-size: 1.2rem;
       font-weight: 700;
+
+      @include responsive(mobile) {
+        font-size: 2rem;
+      }
     }
 
     &--dark {
@@ -73,6 +99,11 @@
   &__followers-grid {
     @include grid(4, 2.4rem, 0);
     margin-bottom: 4.8rem;
+
+    @include responsive(mobile) {
+      grid-template-columns: none;
+      row-gap: 3.2rem;
+    }
   }
 
   &__followers,
@@ -89,6 +120,10 @@
     border-radius: 0.5rem;
     padding: 1.8rem 3.6rem;
     text-align: center;
+
+    @include responsive(mobile) {
+      padding: 3.2rem 4rem;
+    }
   }
 
   &__facebook,
@@ -143,6 +178,10 @@
   &__no-of-followers {
     font-size: 4.8rem;
     font-weight: 700;
+
+    @include responsive(mobile) {
+      font-size: 6.4rem;
+    }
   }
 
   &__followers-text {
@@ -151,6 +190,10 @@
     font-size: 1.2rem;
     letter-spacing: 4px;
     margin-bottom: 2.4rem;
+
+    @include responsive(mobile) {
+      font-size: 1.6rem;
+    }
   }
 
   &__increase-box,
@@ -167,20 +210,37 @@
     color: $bright-red;
   }
 
+  &__reach-percentage {
+    @include responsive(mobile) {
+      font-size: 1.6rem;
+    }
+  }
   &__overview-heading {
     font-size: 2.4rem;
     color: var(--clr-overview-heading);
     margin-bottom: 2rem;
+
+    @include responsive(mobile) {
+      font-size: 3.6rem;
+    }
   }
 
   &__overview-grid {
     @include grid(4, 2.4rem, 1.8rem);
+    @include responsive(mobile) {
+      grid-template-columns: none;
+      row-gap: 2.4rem;
+    }
   }
 
   &__reach-box {
     background-color: var(--clr-card-bg);
     border-radius: 0.5rem;
     padding: 1.8rem;
+
+    @include responsive(mobile) {
+      padding: 3rem;
+    }
   }
 
   &__reach-heading-box {
@@ -192,6 +252,10 @@
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-light);
+
+    @include responsive(mobile) {
+      font-size: 2rem;
+    }
   }
 
   &__reach-description-box {
@@ -200,5 +264,9 @@
   &__total-reach {
     font-size: 3rem;
     font-weight: 700;
+
+    @include responsive(mobile) {
+      font-size: 4rem;
+    }
   }
 }

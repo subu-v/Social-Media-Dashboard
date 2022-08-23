@@ -12,3 +12,11 @@
   column-gap: $col-gap;
   row-gap: $row-gap;
 }
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 23.4375em) {
+      @content;
+    }
+  }
+}
