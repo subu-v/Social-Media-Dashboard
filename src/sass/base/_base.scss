@@ -6,12 +6,39 @@
   box-sizing: inherit;
 }
 
+:root {
+  --clr-bg: hsl(0, 0%, 100%);
+  --clg-top-pattern: hsl(225, 100%, 98%);
+  --clr-card-bg: hsl(227, 47%, 96%);
+  --clr-card-hover: hsl(227, 13%, 86%);
+  --clr-toggle: hsl(230, 22%, 74%);
+  --clr-overview-heading: hsl(228, 12%, 44%);
+  --text-light: hsl(228, 12%, 44%);
+  --text-dark: hsl(230, 17%, 14%);
+}
+
+.dark-mode {
+  --clr-bg: hsl(230, 17%, 14%);
+  --clg-top-pattern: hsl(232, 19%, 15%);
+  --clr-card-bg: hsl(229, 27%, 20%);
+  --clr-card-hover: #3b3f54;
+  --clr-toggle: hsl(228, 34%, 66%);
+  --clr-overview-heading: hsl(0, 0%, 100%);
+  --text-light: hsl(228, 34%, 66%);
+  --text-dark: hsl(0, 0%, 100%);
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  background: linear-gradient(0deg, $white 70%, $pale-blue 30%) no-repeat;
+  background: linear-gradient(
+      0deg,
+      var(--clr-bg) 70%,
+      var(--clg-top-pattern) 30%
+    )
+    no-repeat;
   box-sizing: border-box;
   height: 100vh;
   font-family: "Inter", sans-serif;

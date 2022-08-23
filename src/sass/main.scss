@@ -12,7 +12,7 @@
   &__heading,
   &__no-of-followers,
   &__total-reach {
-    color: $dark-blue;
+    color: var(--text-dark);
   }
 
   &__heading {
@@ -20,15 +20,53 @@
   }
 
   &__total-followers {
-    color: $greyish-blue-dark;
+    color: var(--text-light);
     font-weight: 700;
     font-size: 1.2rem;
   }
 
   &__mode {
+    @include flex(row, center, center, 1.2rem);
+
     &--name {
-      color: $greyish-blue-dark;
+      color: var(--clr-toggle);
       font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    &--dark {
+      background-color: $toggle-color;
+      border-radius: 3.2rem;
+      cursor: pointer;
+      display: block;
+      position: relative;
+      width: 4.8rem;
+      height: 2.4rem;
+      transition: all 0.3s ease;
+    }
+
+    &--dark.toggle-active {
+      background-image: linear-gradient(
+        to right,
+        hsl(210, 78%, 56%),
+        hsl(146, 68%, 55%)
+      );
+    }
+
+    &--dark.toggle-active &--slider {
+      left: 0;
+    }
+
+    &--slider {
+      position: absolute;
+      top: 0;
+      left: 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      background-color: var(--clg-top-pattern);
+      transform: scale(0.8);
+      transition: all 0.3s ease;
     }
   }
 
@@ -39,14 +77,15 @@
 
   &__followers,
   &__reach-box {
+    cursor: pointer;
     transition: all 0.3s ease;
     &:hover {
-      background-color: hsl(230, 22%, 74%);
+      background-color: var(--clr-card-hover);
     }
   }
 
   &__followers {
-    background-color: $greyish-blue-light;
+    background-color: var(--clr-card-bg);
     border-radius: 0.5rem;
     padding: 1.8rem 3.6rem;
     text-align: center;
@@ -97,7 +136,7 @@
   }
 
   &__id-name {
-    color: $greyish-blue-dark;
+    color: var(--text-light);
     font-weight: 700;
   }
 
@@ -107,7 +146,7 @@
   }
 
   &__followers-text {
-    color: $greyish-blue-dark;
+    color: var(--text-light);
     text-transform: uppercase;
     font-size: 1.2rem;
     letter-spacing: 4px;
@@ -130,7 +169,7 @@
 
   &__overview-heading {
     font-size: 2.4rem;
-    color: $greyish-blue-dark;
+    color: var(--clr-overview-heading);
     margin-bottom: 2rem;
   }
 
@@ -139,7 +178,7 @@
   }
 
   &__reach-box {
-    background-color: $greyish-blue-light;
+    background-color: var(--clr-card-bg);
     border-radius: 0.5rem;
     padding: 1.8rem;
   }
@@ -152,7 +191,7 @@
   &__mode-of-reach {
     font-size: 1.2rem;
     font-weight: 700;
-    color: $greyish-blue-dark;
+    color: var(--text-light);
   }
 
   &__reach-description-box {
