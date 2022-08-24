@@ -37,15 +37,34 @@ html {
 }
 
 body {
-  background-image: linear-gradient(
-      0deg,
-      var(--clr-bg) 70%,
-      var(--clg-top-pattern) 30%
-    )
-    no-repeat;
   box-sizing: border-box;
-  height: 100vh;
+  // background-color: var(--clr-bg);
   font-family: "Inter", sans-serif;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+body::before {
+  background-color: var(--clr-bg);
+  height: 100%;
+  z-index: -1;
+}
+
+body::after {
+  background-color: var(--clg-top-pattern);
+  height: 30%;
+  z-index: -1;
+
+  @include responsive(mobile) {
+    border-radius: 0 0 3rem 3rem;
+  }
 }
 
 .container-120w {
